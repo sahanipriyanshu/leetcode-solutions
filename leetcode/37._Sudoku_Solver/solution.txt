@@ -1,0 +1,11 @@
+    }
+
+public:
+    void solveSudoku(vector<vector<char>>& board) {
+        boardPtr = &board;
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < N; j++)
+                if (board[i][j] != '.') placeNumber(board[i][j] - '0', i, j);
+        backtrack(0, 0);
+    }
+};
